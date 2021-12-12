@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+</head>
+<body>
+<input type="text" id="numberOne">
+<br>
+<input type="text" id="numberTwo">
+<br>
+<button id="result" onclick="caculator()">Result</button>
+<h1 id="display"></h1>
+<script>
+    // Bài 3: Câu lệnh nhận giá trị từ 1 ô input:
+    //document.getElementById(id của ô input)
+    //Viết code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1.
+    function caculator() {
+        let a = parseInt(document.getElementById("numberOne").value);
+        let b = parseInt(document.getElementById("numberTwo").value);
+        let s = a * b;
+        document.getElementById("display").innerHTML = "result: " + s;
+    }
+</script>
+</body>
+</html>

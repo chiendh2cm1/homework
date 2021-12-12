@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<input type="text" id="number">
+<button id="result" onclick="caculator()"> result</button>
+<br>
+<p id="display"></p>
+<script>
+    // bài 4: Viết chương trình nhập vào giá trị từ 1 ô input, hiện kết quả ra thẻ p
+    // a.Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a
+    function caculator() {
+        let a = document.getElementById("number").value;
+        let p = a * 4;
+        let s = a* a ;
+        document.getElementById("display").innerHTML = "P hình vuông:" + p + ";" + "S hình vuông:" + s;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 4d</title>
+</head>
+<body>
+<input type="text" id="number">
+<button id="result" onclick="caculator()"> result</button>
+<br>
+<p id="display"></p>
+<script>
+    // 4.	Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
+    //   d.	Nhập vào a là năm, in ra thế kỉ.
+    function caculator() {
+        let year = parseInt(document.getElementById("number").value);
+        let century = parseInt(year / 100)
+        if (year % 100 == 0) {
+            document.getElementById("display").innerHTML = "năm" + ' ' + year + ' ' + "thuộc thế kỉ" + ' ' + century;
+        } else {
+            document.getElementById("display").innerHTML = "năm" + ' ' + year + ' ' + "thuộc thế kỉ" + ' ' + (century + 1);
+        }
+    }
+</script>
+</body>
+</html>

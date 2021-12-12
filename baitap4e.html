@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap4e</title>
+</head>
+<body>
+<input type="text" id="a" value="">
+<br>
+<input type="text" id="b" value="">
+<br>
+<input type="text" id="c" value="">
+<br>
+<button id="result" onclick="display()">Result</button>
+<h1 id="display"></h1>
+<script>
+    //e.	Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của tam giác? tam giác cân? tam giác đều? tam giác vuông?
+    function display() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        if (a > 0 & b > o & c > 0) {
+            if (a + b > c && b + c > a && c + a > b) {
+                if (a == b && b == c) {
+                    document.getElementById("display").innerHTML = 'a,b,c là 3 cạnh của tam giác đều';
+                } else if (a == b || b == c || c == a) {
+                    document.getElementById("display").innerHTML = 'a,b,c là 3 cạnh của tam giác cân';
+                } else if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b) {
+                    document.getElementById("display").innerHTML = 'a,b,c là 3 cạnh của tam giác vuông';
+                } else {
+                    document.getElementById("display").innerHTML = 'a,b,c là 3 cạnh của tam giác';
+                }
+            } else {
+                document.getElementById("display").innerHTML = 'a,b,c không 3 cạnh của tam giác vuông';
+            }
+        } else {
+            document.getElementById("display").innerHTML = 'a,b,c không là 3 cạnh của tam giác';
+        }
+    }
+</script>
+</body>
+</html>

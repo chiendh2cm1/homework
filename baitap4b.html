@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 4b</title>
+</head>
+<body>
+<input type="text" id="numberOne">
+<br>
+<input type="text" id="numberTwo">
+<br>
+<button id="result" onclick="caculator()">Result</button>
+<h1 id="display"></h1>
+<script>
+    //b.Nhập vào a và b, tính a^2, a^b
+    function caculator() {
+        let A = parseInt(document.getElementById("numberOne").value);
+        let B = parseInt(document.getElementById("numberTwo").value);
+        let squareA = A * A;
+        let squareB = B * B;
+        document.getElementById("display").innerHTML = "Kết quả: " + squareA + ";" + squareB;
+    }
+
+</script>
+</body>
+</html>
